@@ -198,11 +198,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         ),
       ),
       bottomSheet: _currentPage == _numPages - 1
-          ? SizedBox(
-              height: 40.0,
-              width: 50,
-              child: OutlineButton(
-                onPressed: () => print('get started'),
+          ? Container(
+              height: 80.0,
+              width: double.infinity,
+              color: Colors.white,
+              child: GestureDetector(
+                onTap: () => print('get started'),
                 child: Padding(
                   padding: EdgeInsets.symmetric(vertical: 20.0),
                   child: Row(
@@ -211,15 +212,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       Text(
                         'Get Started',
                         style: TextStyle(
-                            color: Color(0xFFFFFFFF),
+                            color: Color(0xFFC31432),
                             fontSize: 18.0,
-                            fontFamily: 'Brandon'),
+                            fontFamily: 'Gotham'),
                       ),
                       SizedBox(width: 10.0),
                       Icon(
                         Icons.arrow_forward_ios,
-                        color: Color(0xFFFFFFFF),
-                        size: 25.0,
+                        color: Color(0xFFC31432),
+                        size: 20.0,
                       )
                     ],
                   ),
